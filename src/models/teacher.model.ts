@@ -4,7 +4,6 @@ import bcrypt from 'bcrypt';
 
 class Teacher extends Model {
   public teacherId!: number;
-  public userId!: number;
   public email!: string;
   public password!: string;
   public firstName!: string;
@@ -24,11 +23,6 @@ Teacher.init({
     primaryKey: true,
     autoIncrement: true,
     field: 'teacher_id'
-  },
-  userId: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    field: 'user_id'
   },
   email: {
     type: DataTypes.STRING,
